@@ -1,0 +1,25 @@
+
+    PROCEDURE dotProduct(vect_A,vect_B:ARRAY_OF INTEGER)
+    VAR
+        ps: INTEGER[3];
+        product : 0;
+    BEGIN
+        FOR i FROM 0 TO ps.length+1 DO
+        product = product + vect_A[i] * vect_B[i];
+    RETURN product;
+    END_FOR
+    END
+
+    FUNCTION crossProduct(vect_A, vect_B,cross_P:ARRAY_OF INTEGER):INTEGER
+    VAR
+    cross_P[0] = vect_A[1] * vect_B[2]- vect_A[2] * vect_B[1];
+    cross_P[1] = vect_A[2] * vect_B[0]- vect_A[0] * vect_B[2];
+    cross_P[2] = vect_A[0] * vect_B[1]- vect_A[1] * vect_B[0];
+    END
+
+ALGORITHM DotP
+VAR
+n :=INTEGER[3];
+BEGIN
+    crossProduct(vect_A, vect_B,cross_P);
+END
